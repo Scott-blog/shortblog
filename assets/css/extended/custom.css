@@ -1,0 +1,64 @@
+/* ============================================================
+   中文长文排版优化（全站生效）
+   只用 PaperMod 自带的 CSS 变量，暗色模式自动适配
+   ============================================================ */
+
+/* 正文：衬线字体 + 宽松行距，适合议论文阅读 */
+.post-content {
+  font-family: "Noto Serif SC", "Source Han Serif SC", "Songti SC", "STSong", serif;
+  font-size: 1.06rem;
+  line-height: 2.0;
+  letter-spacing: 0.015em;
+}
+
+/* 段落间距 */
+.post-content p {
+  margin: 1.4em 0;
+  text-align: justify;
+}
+
+/* 引用块：更安静的书卷气 */
+.post-content blockquote {
+  font-style: normal;
+  color: var(--secondary);
+  border-left: 3px solid var(--tertiary);
+  border-radius: 0;
+  padding: 0.4em 1.4em;
+  margin: 1.8em 0;
+}
+
+.post-content blockquote p {
+  margin: 0.2em 0;
+  text-align: left;
+}
+
+/* 有序列表：拉开条目间距 */
+.post-content ol > li,
+.post-content ul > li {
+  margin: 0.9em 0;
+}
+
+.post-content ol > li::marker,
+.post-content ul > li::marker {
+  color: var(--secondary);
+  font-weight: 600;
+}
+
+/* 列表内段落不额外加距 */
+.post-content li > p {
+  margin: 0.3em 0;
+}
+
+/* 文章标题区 */
+.post-title {
+  font-size: 2rem;
+}
+
+.post-meta {
+  margin-bottom: 1.2em;
+}
+
+/* 标签（文章尾部）更收敛 */
+.post-tags a {
+  font-size: 0.85rem;
+}
