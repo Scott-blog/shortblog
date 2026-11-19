@@ -10,7 +10,7 @@ buildDrafts = false
 
 [params]
   author = "里呦锅"
-  description = "北大法律人，关注政治经济学、资本市场、哲学"
+  description = "北大法律人，政治经济、资本市场、哲学、AI"
   defaultTheme = "auto"          # auto / light / dark
   ShowReadingTime = false
   ShowShareButtons = false
