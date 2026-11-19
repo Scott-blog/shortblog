@@ -1,0 +1,51 @@
+baseURL = "https://example.com"   # 部署到 Cloudflare Pages 后改成你的真实域名或 *.pages.dev 地址
+locale = "zh-cn"
+defaultContentLanguage = "zh"
+title = "里呦锅的短评集"
+theme = "PaperMod"
+paginate = 10
+
+enableRobotsTXT = true
+buildDrafts = false
+
+[params]
+  author = "里呦锅"
+  description = "北大法律人，关注政治经济学、资本市场、哲学"
+  defaultTheme = "auto"          # auto / light / dark
+  ShowReadingTime = false
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = false
+  ShowCodeCopyButtons = true
+  ShowToc = false
+
+[params.homeInfoParams]
+  Title = "短评集"
+  Content = "关于法律、商业与人的流变"
+
+[[params.socialIcons]]
+  name = "github"
+  url = "https://github.com/Scott-blog"
+
+[outputs]
+  home = ["HTML", "RSS"]
+
+[markup]
+  [markup.highlight]
+    style = "dracula"
+    lineNos = false
+
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    name = "短评"
+    url = "/posts/"
+    weight = 1
+  [[menu.main]]
+    identifier = "about"
+    name = "关于"
+    url = "/about/"
+    weight = 2
+
+[minify]
+  disableXML = true
