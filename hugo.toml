@@ -1,4 +1,4 @@
-baseURL = "https://example.com"   # 部署到 Cloudflare Pages 后改成你的真实域名或 *.pages.dev 地址
+baseURL = "https://shortblog.pages.dev"
 locale = "zh-cn"
 defaultContentLanguage = "zh"
 title = "里呦锅的短评集"
