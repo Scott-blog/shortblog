@@ -11,7 +11,7 @@ buildDrafts = false
 [params]
   author = "里呦锅"
   description = "北大法律人，政治经济、资本市场、哲学、AI"
-  defaultTheme = "auto"          # auto / light / dark
+  defaultTheme = "dark"          # 摄影师站风格：默认暗色，读者仍可手动切换
   ShowReadingTime = false
   ShowShareButtons = false
   ShowPostNavLinks = true

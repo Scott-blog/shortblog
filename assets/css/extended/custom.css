@@ -144,3 +144,67 @@
     background-position: center 40%;
   }
 }
+
+/* ============================================================
+   摄影师站风格装修：暗色主导 + 星空青蓝强调 + 衬线标题
+   ============================================================ */
+
+/* 强调色变量：浅色模式用深青保证对比度，暗色用亮青呼应星空 */
+:root {
+  --accent: #3f7fa5;
+}
+[data-theme="dark"] {
+  --accent: #8abfdd;
+}
+
+/* 正文链接浮出强调色（原来与正文同色） */
+.post-content a {
+  color: var(--accent);
+  text-decoration-color: color-mix(in srgb, var(--accent) 40%, transparent);
+}
+.post-content a:hover {
+  color: var(--accent);
+  text-decoration-color: var(--accent);
+}
+
+/* 选中文本：青蓝高亮 */
+::selection {
+  background: rgba(95, 158, 197, .4);
+  color: #f4f7ff;
+}
+
+/* 文章标题：衬线、字距、收敛字号（摄影师站的克制感） */
+.post-title {
+  font-family: "Noto Serif SC", "Source Han Serif SC", "Songti SC", "STSong", serif;
+  font-size: 30px;
+  letter-spacing: .05em;
+  line-height: 1.45;
+}
+.page-header h1 {
+  font-family: "Noto Serif SC", "Source Han Serif SC", "Songti SC", "STSong", serif;
+  font-size: 30px;
+  letter-spacing: .05em;
+}
+
+/* 左上角站名 logo：衬线 + 字距，与横幅呼应 */
+.logo,
+.logo a {
+  font-family: "Noto Serif SC", "Source Han Serif SC", "Songti SC", "STSong", serif;
+  letter-spacing: .1em;
+}
+
+/* 导航栏菜单字距 */
+.menu a {
+  letter-spacing: .06em;
+}
+
+/* 列表卡片：hover 时标题浮出强调色 */
+.post-entry:hover .entry-header h2 {
+  color: var(--accent);
+  transition: color .2s ease;
+}
+
+/* 暗色下正文色微调冷一点，呼应星空 */
+[data-theme="dark"] {
+  --content: rgb(200, 205, 212);
+}
