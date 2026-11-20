@@ -103,6 +103,7 @@
    上方留完整银河，文字压在下方较暗的山景上
    ============================================================ */
 .first-entry.home-info {
+  position: relative;
   justify-content: flex-end;
   min-height: clamp(280px, 36vw, 400px);
   padding: 2rem 2.2rem 1.8rem;
@@ -207,4 +208,52 @@
 /* 暗色下正文色微调冷一点，呼应星空 */
 [data-theme="dark"] {
   --content: rgb(200, 205, 212);
+}
+
+/* ============================================================
+   季节系统：季节强调色轮换 + 页脚季节签
+   冬(11-2月)=星空青蓝(默认) 春(3-5)=樱粉 夏(6-8)=青绿 秋(9-10)=橙棕
+   ============================================================ */
+html.season-spring { --accent: #b0577d; }
+html.season-summer { --accent: #3f8f6b; }
+html.season-autumn { --accent: #b0722d; }
+html[data-theme="dark"].season-spring { --accent: #e8a2ba; }
+html[data-theme="dark"].season-summer { --accent: #8fd0ab; }
+html[data-theme="dark"].season-autumn { --accent: #e0a860; }
+
+/* 页脚季节签 */
+.season-note {
+  text-align: center;
+  font-family: "Noto Serif SC", "Source Han Serif SC", "Songti SC", "STSong", serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  color: var(--tertiary);
+  margin: 0.4rem auto 1.6rem;
+}
+
+/* ============================================================
+   圣诞挂件（11月15日 ~ 12月26日由 seasonal.js 自动启停）
+   素材：SVG Repo CC0 设计师矢量（金线树）
+   层次：小树 inline 排布在站名旁，不脱离文档流，天然不遮挡
+   ============================================================ */
+
+/* 站名旁的金线小树：inline 排布，不脱离文档流，天然不遮挡 */
+.season-tree {
+  display: inline-flex;
+  margin-left: 0.45em;
+  vertical-align: -3px;
+  animation: tree-glow 5s ease-in-out infinite;
+}
+
+.season-tree img {
+  opacity: 0.9;
+}
+
+@keyframes tree-glow {
+  0%, 100% { filter: drop-shadow(0 0 2px rgba(217, 179, 108, 0.25)); }
+  50% { filter: drop-shadow(0 0 6px rgba(217, 179, 108, 0.5)); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .season-tree { animation: none; }
 }
