@@ -19,7 +19,13 @@
   }
   root.classList.add("season-" + season);
 
-  var PHRASES = {
+  var isEN = (root.lang || "zh").indexOf("en") === 0;
+  var PHRASES = isEN ? {
+    winter: "Long winter nights are for long reads.",
+    spring: "Spring is here—plant an idea.",
+    summer: "Summer nights are noisy; read something quiet.",
+    autumn: "Autumn suits both looking back and setting out."
+  } : {
     winter: "冬夜漫长，适合读长文。",
     spring: "春天到了，把想法种下去。",
     summer: "夏夜聒噪，读点安静的。",

@@ -1,7 +1,6 @@
 baseURL = "https://scottblog.cc"
-locale = "zh-cn"
 defaultContentLanguage = "zh"
-title = "里呦锅的短评集"
+defaultContentLanguageInSubdir = false   # 中文在根路径，英文在 /en/
 theme = "PaperMod"
 paginate = 10
 
@@ -10,7 +9,6 @@ buildDrafts = false
 
 [params]
   author = "里呦锅"
-  description = "北大法律人，政治经济、资本市场、哲学、AI"
   defaultTheme = "dark"          # 摄影师站风格：默认暗色，读者仍可手动切换
   ShowReadingTime = false
   ShowShareButtons = false
@@ -18,10 +16,6 @@ buildDrafts = false
   ShowBreadCrumbs = false
   ShowCodeCopyButtons = true
   ShowToc = false
-
-[params.homeInfoParams]
-  Title = "短评集"
-  Content = "关于法律、商业与人的流变"
 
 [[params.socialIcons]]
   name = "github"
@@ -38,17 +32,50 @@ buildDrafts = false
     [markup.goldmark.renderer]
       hardWraps = true   # 单个回车 = 换行，不用再敲两个空格
 
-[menu]
-  [[menu.main]]
-    identifier = "posts"
-    name = "短评"
-    url = "/posts/"
-    weight = 1
-  [[menu.main]]
-    identifier = "about"
-    name = "关于"
-    url = "/about/"
-    weight = 2
-
 [minify]
   disableXML = true
+
+# ---------------- 双语配置：zh 在根路径，en 在 /en/ ----------------
+[languages]
+  [languages.zh]
+    languageCode = "zh-cn"
+    languageName = "中文"
+    weight = 1
+    title = "里呦锅的短评集"
+    [languages.zh.params]
+      description = "北大法律人，政治经济、资本市场、哲学、AI"
+      [languages.zh.params.homeInfoParams]
+        Title = "短评集"
+        Content = "关于法律、商业与人的流变"
+    [[languages.zh.menus.main]]
+      identifier = "posts"
+      name = "短评"
+      url = "/posts/"
+      weight = 1
+    [[languages.zh.menus.main]]
+      identifier = "about"
+      name = "关于"
+      url = "/about/"
+      weight = 2
+
+  [languages.en]
+    languageCode = "en-us"
+    languageName = "EN"
+    weight = 2
+    title = "Liyouguo's Notes"
+    [languages.en.params]
+      author = "Liyouguo"
+      description = "Law, political economy, capital markets, philosophy, AI"
+      [languages.en.params.homeInfoParams]
+        Title = "Notes"
+        Content = "On law, business, and the flux of people"
+    [[languages.en.menus.main]]
+      identifier = "posts"
+      name = "Notes"
+      url = "/en/posts/"
+      weight = 1
+    [[languages.en.menus.main]]
+      identifier = "about"
+      name = "About"
+      url = "/en/about/"
+      weight = 2
