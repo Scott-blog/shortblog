@@ -1,2 +1,9 @@
 {{- /* 自定义 head 注入：点赞脚本 */ -}}
 <script defer src="/js/like.js"></script>
+
+{{- /* x-default：语言不匹配的访客（搜索引擎视角）默认展示中文版 */ -}}
+{{ if .IsTranslated }}
+{{- $zh := . -}}
+{{- range .AllTranslations }}{{ if eq .Lang "zh" }}{{ $zh = . }}{{ end }}{{ end -}}
+<link rel="alternate" hreflang="x-default" href="{{ $zh.Permalink }}">
+{{ end }}
