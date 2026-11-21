@@ -264,6 +264,16 @@ html[data-theme="dark"].season-autumn { --accent: #e0a860; }
    是宋体自带西文，偏窄且暗色下发灰，这里整体换血
    ============================================================ */
 
+/* 全站字体统一：英文页所有元素（导航/日期/摘要/标签/点赞按钮/页脚）
+   都继承这一套衬线，消除“标题衬线 + 元信息无衬线”的割裂感 */
+html[lang="en"] body,
+html[lang="en"] button,
+html[lang="en"] input,
+html[lang="en"] select,
+html[lang="en"] textarea {
+  font-family: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, "Times New Roman", serif;
+}
+
 /* 正文：英文经典书卷衬线，行距收窄到英文惯例，取消中文字距 */
 html[lang="en"] .post-content {
   font-family: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, "Times New Roman", serif;
