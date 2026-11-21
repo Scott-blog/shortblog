@@ -68,7 +68,7 @@ buildDrafts = false
       description = "Law, political economy, capital markets, philosophy, AI"
       [languages.en.params.homeInfoParams]
         Title = "Notes"
-        Content = "On law, business, and the flux of people"
+        Content = "On the flux of law, business, and people"
     [[languages.en.menus.main]]
       identifier = "posts"
       name = "Notes"
