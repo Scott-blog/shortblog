@@ -257,3 +257,61 @@ html[data-theme="dark"].season-autumn { --accent: #e0a860; }
 @media (prefers-reduced-motion: reduce) {
   .season-tree { animation: none; }
 }
+
+/* ============================================================
+   英文版专属排版（html lang="en" 时生效，不碰中文页）
+   英文用 Charter/Georgia 系衬线；中文衬线栈对拉丁字母的效果
+   是宋体自带西文，偏窄且暗色下发灰，这里整体换血
+   ============================================================ */
+
+/* 正文：英文经典书卷衬线，行距收窄到英文惯例，取消中文字距 */
+html[lang="en"] .post-content {
+  font-family: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, "Times New Roman", serif;
+  font-size: 1.08rem;
+  line-height: 1.78;
+  letter-spacing: normal;
+}
+
+/* 英文正文左对齐（两端对齐在英文里容易出现“河流”式空隙） */
+html[lang="en"] .post-content p {
+  text-align: left;
+  overflow-wrap: break-word;
+}
+
+/* 引用块：英文排版惯例用斜体，配合左侧强调线 */
+html[lang="en"] .post-content blockquote {
+  font-style: italic;
+}
+
+/* 标题/站名：拉丁字母不适合 0.05~0.1em 的大字距，收小 */
+html[lang="en"] .post-title,
+html[lang="en"] .page-header h1 {
+  letter-spacing: 0.01em;
+  font-family: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, "Times New Roman", serif;
+  font-weight: 700;
+}
+
+/* 列表卡片标题也统一到同一套衬线，避免“标题无衬线 + 正文衬线”的割裂 */
+html[lang="en"] .post-entry .entry-header h2 {
+  font-family: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, "Times New Roman", serif;
+  letter-spacing: 0.005em;
+  font-weight: 700;
+}
+
+html[lang="en"] .logo,
+html[lang="en"] .logo a {
+  letter-spacing: 0.04em;
+  font-family: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, "Times New Roman", serif;
+}
+
+/* 横幅标题与简介的西文字形 */
+html[lang="en"] .first-entry.home-info .entry-header h1 {
+  font-family: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, "Times New Roman", serif;
+  letter-spacing: 0.02em;
+}
+
+/* 页脚季节签（英文文案）同步换西文衬线 */
+html[lang="en"] .season-note {
+  font-family: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, "Times New Roman", serif;
+  letter-spacing: 0.06em;
+}

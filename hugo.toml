@@ -62,9 +62,9 @@ buildDrafts = false
     languageCode = "en-us"
     languageName = "EN"
     weight = 2
-    title = "Liyouguo's Notes"
+    title = "Scott's Notes"
     [languages.en.params]
-      author = "Liyouguo"
+      author = "Scott"
       description = "Law, political economy, capital markets, philosophy, AI"
       [languages.en.params.homeInfoParams]
         Title = "Notes"

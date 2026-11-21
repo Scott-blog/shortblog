@@ -6,6 +6,6 @@ draft: false
 
 Wild grass seeks no audience; it drifts into the open field, talking to itself.
 Politics · Economy · Law · Poetry · Aesthetics · People
-——————
+———
 Contact me: draculali@live.com
-Liyouguo
+Scott
