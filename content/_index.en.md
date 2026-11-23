@@ -1,3 +1,3 @@
 ---
-title: "Notes"
+title: "Scott's Notes"
 ---
