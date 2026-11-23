@@ -67,7 +67,7 @@ buildDrafts = false
       author = "Scott"
       description = "Law, political economy, capital markets, philosophy, AI"
       [languages.en.params.homeInfoParams]
-        Title = "Notes"
+        Title = "Scott's Notes"
         Content = "On the flux of law, business, and people"
     [[languages.en.menus.main]]
       identifier = "posts"
